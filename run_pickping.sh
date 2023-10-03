@@ -19,14 +19,14 @@ CPU=8
 #  exit
 #fi
 
-module load relocate2 #Possibly need to make a different virtual environment
+module load biopython  #Possibly need to make a different virtual environment
 SAMPFILE=samples.csv
 input=$(realpath repeat_RIL1) #Testing with data from just RIL1 to see if it will work
 mkdir -p results
 OUTDIR=$(realpath results)
 
 
-scripts/PickPing.py --input $input --output $results
+python PickPing.py --input $input --output $results
 
 
 # WIP to use csv/tsv file to be used as an array job
